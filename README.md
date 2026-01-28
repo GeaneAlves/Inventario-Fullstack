@@ -1,5 +1,10 @@
 # 📦 Sistema de Controle de Estoque (Fullstack)
 
+![.NET](https://img.shields.io/badge/.NET-8.0-purple)
+![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
+
 Sistema de gerenciamento de inventário desenvolvido para demonstrar operações de **CRUD completo** (Create, Read, Update, Delete) utilizando arquitetura moderna com separação entre Backend e Frontend.
 
 ## 🚀 Tecnologias Utilizadas
