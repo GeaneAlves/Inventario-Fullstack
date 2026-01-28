@@ -9,17 +9,21 @@ Sistema de gerenciamento de inventário desenvolvido para demonstrar operações
 
 ## 🚀 Tecnologias Utilizadas
 
-### Backend (API)
-- **.NET 9** (C#)
-- **Entity Framework Core** (In-Memory Database para testes rápidos)
-- **Swagger** (Documentação da API)
-- **RESTful API** (Verbos GET, POST, PUT, DELETE)
+### Backend
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Swagger](https://img.shields.io/badge/-Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
+![Entity Framework](https://img.shields.io/badge/Entity%20Framework-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 
-### Frontend (Interface)
-- **Angular 19**
-- **TypeScript**
-- **HTML5 & CSS3**
-- **Integração via HttpClient**
+### Frontend
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Ferramentas
+![VS Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
