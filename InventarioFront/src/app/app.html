@@ -1,0 +1,17 @@
+<div style="text-align: center; font-family: Arial, sans-serif; margin-top: 50px;">
+  <h1>📦 Controle de Estoque</h1>
+  <p>Dados vindos diretamente da API C#</p>
+
+  <ul style="list-style-type: none; padding: 0;">
+    
+    <li *ngFor="let item of equipamentos" 
+        style="background: #f4f4f4; margin: 10px auto; padding: 15px; width: 300px; border-radius: 8px; border: 1px solid #ddd;">
+      
+      <strong>{{ item.nome }}</strong> <br>
+      <small>{{ item.categoria }}</small> <br>
+      <span style="color: green; font-weight: bold;">{{ item.status }}</span>
+      
+    </li>
+
+  </ul>
+</div>

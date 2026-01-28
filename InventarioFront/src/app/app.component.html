@@ -1,0 +1,42 @@
+<div style="text-align: center; font-family: Arial, sans-serif; margin-top: 50px;">
+  <h1>📦 Controle de Estoque</h1>
+
+  <div style="background: #e8f0fe; padding: 20px; width: 300px; margin: 0 auto 30px auto; border-radius: 8px;">
+    <h3>Novo Equipamento</h3>
+    
+    <input type="text" placeholder="Nome do Equipamento" [(ngModel)]="novoEquipamento.nome" 
+           style="padding: 8px; margin-bottom: 10px; width: 90%;"> <br>
+    
+    <input type="text" placeholder="Categoria (ex: TI, Móveis)" [(ngModel)]="novoEquipamento.categoria" 
+           style="padding: 8px; margin-bottom: 10px; width: 90%;"> <br>
+
+    <button (click)="salvar()" style="padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 4px;">
+      Salvar
+    </button>
+  </div>
+
+  <hr style="width: 300px; margin-bottom: 20px;">
+
+  <p>Lista de Itens no Banco de Dados:</p>
+
+  <ul style="list-style-type: none; padding: 0;">
+    <li *ngFor="let item of equipamentos" 
+        style="background: #f4f4f4; margin: 10px auto; padding: 15px; width: 300px; border-radius: 8px; border: 1px solid #ddd; position: relative;">
+      
+      <strong>{{ item.nome }}</strong> <br>
+      <small>{{ item.categoria }}</small> <br>
+      <span style="color: green; font-weight: bold;">{{ item.status }}</span>
+
+  <div class="botoes">
+    <button (click)="aoClicarEmEditar(item)" style="background-color: #ffc107; color: black; margin-right: 5px;">
+       Editar ✏️
+    </button>
+
+    <button (click)="remover(item.id)" style="background-color: #dc3545; color: white;">
+       Excluir 🗑️
+    </button>
+  </div>  
+         
+    </li>
+  </ul>
+</div>

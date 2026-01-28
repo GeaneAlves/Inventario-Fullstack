@@ -1,0 +1,30 @@
+A Solução (Liberar permissão para o Usuário)
+Você precisa dizer ao PowerShell: "Eu confio nos scripts que eu mesmo rodo".
+
+No próprio terminal onde deu o erro, digite (ou copie e cole) este comando exato:
+
+PowerShell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+para instalar Angular direto no terminal
+npm install -g @angular/cli
+
+ng serve -o
+
+Passo 2: Ligar o Site (Frontend)
+Agora precisamos levantar o site de novo.
+
+No VS Code, abra um Novo Terminal (clique no + no canto do terminal ou no menu Terminal > New Terminal).
+
+Entre na pasta do Front:
+
+PowerShell
+cd C:\CSharp\InventarioFront
+Rode o comando do Angular:
+
+
+ng serve -o
+e entrar no localhost : localhost:4200
+
+em outro terminal digitar : dotnet run

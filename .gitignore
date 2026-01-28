@@ -1,0 +1,12 @@
+# --- Ignorar coisas do Angular ---
+node_modules/
+dist/
+.angular/
+.vscode/
+
+# --- Ignorar coisas do C# (.NET) ---
+bin/
+obj/
+.vs/
+*.user
+appsettings.Development.json
