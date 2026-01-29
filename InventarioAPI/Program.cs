@@ -5,9 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // --- CONFIGURAÇÕES (SERVIÇOS) ---
 
-// 1. Adiciona o Banco de Dados em Memória (O QUE FALTAVA!)
-builder.Services.AddDbContext<InventarioContext>(opt => opt.UseInMemoryDatabase("Inventario"));
-
+// 1. Configuração do SQL Server (Lendo do appsettings.json)
+builder.Services.AddDbContext<InventarioContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("ConexaoPadrao")));
 // 2. Configura o CORS (para o Angular poder conectar)
 builder.Services.AddCors(options =>
 {
@@ -34,7 +34,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// 3. Usa o CORS que configuramos acima
 app.UseCors("PermitirTudo");
 
 app.UseAuthorization();
