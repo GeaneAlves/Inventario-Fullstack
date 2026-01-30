@@ -1,34 +1,41 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs'; // Opcional, mas boa prática
+import { Observable } from 'rxjs';
+
+export interface Equipamento {
+  id: number;
+  nome: string;
+  categoria: string;
+  status: string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
-export class EquipamentoService {
-
-  // O endereço da sua API
-  private apiUrl = 'http://localhost:5028/api/Equipamento';
+export class InventarioService {
+  // Ajuste a porta se necessário (geralmente é 5028 ou 5000)
+  private apiUrl = 'http://localhost:5028/api/inventario';
 
   constructor(private http: HttpClient) { }
 
-    // Método 1: Busca a lista de equipamentos
-  listar() {
-    return this.http.get<any[]>(this.apiUrl);
-  }
-  // --- NOVO: Método 2: Envia um novo item ---
-  cadastrar(item: any) {
-    return this.http.post<any>(this.apiUrl, item);
+  // Buscar todos
+  listar(): Observable<Equipamento[]> {
+    return this.http.get<Equipamento[]>(this.apiUrl);
   }
 
-  // NOVO: Método para editar
-  editar(item: any) {
-    return this.http.put<any>(`${this.apiUrl}/${item.id}`, item);
+  // Criar novo (POST)
+  criar(equipamento: Equipamento): Observable<Equipamento> {
+    return this.http.post<Equipamento>(this.apiUrl, equipamento);
   }
-  
-  // --- NOVO: Método para apagar ---
-  // Ele precisa receber o ID para saber QUAL apagar
-  excluir(id: number) {
-    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+
+  // --- NOVO MÉTODO: ATUALIZAR (PUT) ---
+  editar(equipamento: Equipamento): Observable<Equipamento> {
+    // A URL fica tipo: .../api/inventario/15
+    return this.http.put<Equipamento>(`${this.apiUrl}/${equipamento.id}`, equipamento);
+  }
+
+  // Deletar
+  remover(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

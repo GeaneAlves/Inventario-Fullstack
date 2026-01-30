@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* --- TEMA GLOBAL (DARK MODE) --- */
+:root {
+  --bg-color: #121214;       /* Fundo quase preto */
+  --card-bg: #202024;        /* Cinza Chumbo */
+  --text-primary: #e1e1e6;   /* Branco Gelo */
+  --text-secondary: #a8a8b3; /* Cinza Claro */
+  --accent-color: #8257e6;   /* Roxo Neon */
+  --danger-color: #e83f5b;   /* Vermelho */
+  --border-radius: 8px;
+}
+
+body {
+  background-color: var(--bg-color); /* Aqui a mágica acontece! */
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+/* Reset básico */
+* { box-sizing: border-box; }

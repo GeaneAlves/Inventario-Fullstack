@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using InventarioAPI.Models;
+using InventarioAPI.Models; // <--- ADICIONE ESTA LINHA IMPORTANTE
 
 namespace InventarioAPI.Data
 {
