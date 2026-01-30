@@ -113,3 +113,60 @@ input:focus, select:focus {
 
 .btn-editar:hover { background-color: #29292e; color: white; border-color: white; }
 .btn-excluir:hover { border-color: var(--danger-color); color: var(--danger-color); }
+
+/* --- DASHBOARD STYLES --- */
+.dashboard-container {
+  display: grid;
+  /* Cria colunas automáticas. Se a tela for pequena, quebra linha */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 40px auto; /* Centralizado e com espaço embaixo */
+}
+
+.dash-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #323238;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dash-card:hover {
+  transform: translateY(-5px); /* Sobe um pouco ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Títulos e Números */
+.dash-titulo {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.dash-numero {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* CORES DAS BORDAS DE BAIXO (Efeito Neon) */
+.dash-card.roxo { border-bottom: 4px solid var(--accent-color); }
+.dash-card.verde { border-bottom: 4px solid #04d361; }
+.dash-card.azul  { border-bottom: 4px solid #00bfff; }
+.dash-card.vermelho { border-bottom: 4px solid #e83f5b; }
+
+/* Efeito de brilho sutil no fundo */
+.dash-card.roxo .dash-numero { color: var(--accent-color); }
+.dash-card.verde .dash-numero { color: #04d361; }
+.dash-card.azul .dash-numero { color: #00bfff; }
+.dash-card.vermelho .dash-numero { color: #e83f5b; }

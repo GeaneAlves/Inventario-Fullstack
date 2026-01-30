@@ -1,0 +1,172 @@
+/* --- FORMULÁRIO --- */
+.container-formulario {
+  background-color: var(--card-bg);
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0,0,0, 0.5);
+  border: 1px solid #323238;
+}
+
+.container-formulario h2 {
+  color: var(--text-primary);
+  text-align: center;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+.label-status {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Inputs e Selects */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: #121214;
+  border: 1px solid #323238;
+  border-radius: 4px;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent-color);
+}
+
+/* Botão Salvar */
+.btn-salvar {
+  width: 100%;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+  transition: opacity 0.2s;
+}
+
+.btn-salvar:hover { opacity: 0.9; }
+
+/* --- LISTA DE ITENS --- */
+.lista-items {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+
+.item-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid var(--accent-color);
+}
+
+.info strong { display: block; font-size: 1.1rem; color: var(--text-primary); }
+.info span { font-size: 0.9rem; color: var(--text-secondary); }
+
+/* CORES DOS STATUS */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.verde { color: #04d361; border: 1px solid #04d361; background: rgba(4, 211, 97, 0.1); }
+.azul  { color: #00bfff; border: 1px solid #00bfff; background: rgba(0, 191, 255, 0.1); }
+.vermelho { color: #e83f5b; border: 1px solid #e83f5b; background: rgba(232, 63, 91, 0.1); }
+
+/* --- BOTÕES DE AÇÃO --- */
+.botoes { display: flex; gap: 10px; }
+
+.btn-editar, .btn-excluir {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #323238;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.btn-editar:hover { background-color: #29292e; color: white; border-color: white; }
+.btn-excluir:hover { border-color: var(--danger-color); color: var(--danger-color); }
+
+/* --- DASHBOARD STYLES --- */
+.dashboard-container {
+  display: grid;
+  /* Cria colunas automáticas. Se a tela for pequena, quebra linha */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 40px auto; /* Centralizado e com espaço embaixo */
+}
+
+.dash-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #323238;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dash-card:hover {
+  transform: translateY(-5px); /* Sobe um pouco ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Títulos e Números */
+.dash-titulo {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.dash-numero {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* CORES DAS BORDAS DE BAIXO (Efeito Neon) */
+.dash-card.roxo { border-bottom: 4px solid var(--accent-color); }
+.dash-card.verde { border-bottom: 4px solid #04d361; }
+.dash-card.azul  { border-bottom: 4px solid #00bfff; }
+.dash-card.vermelho { border-bottom: 4px solid #e83f5b; }
+
+/* Efeito de brilho sutil no fundo */
+.dash-card.roxo .dash-numero { color: var(--accent-color); }
+.dash-card.verde .dash-numero { color: #04d361; }
+.dash-card.azul .dash-numero { color: #00bfff; }
+.dash-card.vermelho .dash-numero { color: #e83f5b; }
